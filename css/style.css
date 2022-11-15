@@ -58,10 +58,41 @@
 }
 
 .headerNotifiche{
+    display: flex;
     width: 100%;
     height: 8%;
     background-color: rgba(142, 218, 252, 1);
 }
+
+.paragrafo{
+    font-size: 0.7rem;
+}
+
+.fa-bell-slash{
+    font-size: 1.5rem;
+}
+
+.chatPersone{
+    height: calc(100% - 8% - 8%);
+    background-color: white;
+}
+
+.imgNomeChat{
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid grey;
+}
+
+
+
+.nomeUltimoOrario{
+    width: 70%;
+}
+
+.name{
+    display: block;
+}
+
 
 /* CLASSI COLONNA DESTRA */
 
@@ -80,17 +111,7 @@
     align-items: center;
 }
 
-.headerNotifiche{
-    display: flex;
-}
 
-.paragrafo{
-    font-size: 0.7rem;
-}
-
-.fa-bell-slash{
-    font-size: 1.5rem;
-}
 
 .imgNomeRight{
     display: flex;

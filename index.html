@@ -18,7 +18,7 @@
                     <div class="headerLeft">
                         
                             <div class="imgNome ps-2">
-                                <img class="imgAvatar" :src="contacts[index].avatar" alt="">
+                                <img class="imgAvatar" :src="contacts[0].avatar" alt="">
                                 <h6 class="pt-2 ps-2">{{contacts[index].name}}</h6>
                             </div>
                             <div class="iconHeaderLeft">
@@ -40,15 +40,26 @@
                     <div class="barraDiRicerca">
 
                     </div>
-                    <div class="chatPersone">
-
+                    <div class="chatPersone" >
+                        <div v-for="(elem, index) in contacts" :key="index">
+                            <div class="imgNomeChat ps-2 pt-1 pb-2 align-items-center" >
+                                <img class="imgAvatar" :src="contacts[index].avatar" alt="">
+                                <div class= "nomeUltimoOrario ps-2">
+                                    <span class="name">{{contacts[index].name}}</span>
+                                    <div class="d-flex justify-content-between">
+                                        <span class="paragrafo">Ultimo messaggio</span>
+                                        <span class="paragrafo text-end">12.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="columnRight">
                     <div class="headerRight">
 
                         <div class="imgNomeRight ps-3">
-                            <img class="imgAvatar" :src="contacts[index].avatar" alt="">
+                            <img class="imgAvatar" :src="contacts[0].avatar" alt="">
                             <div>
                                 <h6 class="pt-2 ps-2">{{contacts[index].name}}</h6>
                                 <p></p>
