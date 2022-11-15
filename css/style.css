@@ -20,6 +20,17 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border: 1px solid black;
+}
 
+.columnLeft{
+    width: 30%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.columnRight{
+    width: 70%;
+    height: 100%;
     border: 1px solid black;
 }
