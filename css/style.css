@@ -128,6 +128,30 @@
     width: 100%;
     height: 84%;
     background-image: url(../img/mine.jpg);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sent{
+    background-color: green;
+    color: white;
+    flex-wrap: wrap;
+    max-width: 30%;
+    min-width: 10%;
+    padding: 5px;
+    border-radius: 10px;
+    align-self: flex-end;
+}
+
+.received{
+    background-color: white;
+    color: black;
+    flex-wrap: wrap;
+    max-width: 30%;
+    min-width: 10%;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 .footerRight{
