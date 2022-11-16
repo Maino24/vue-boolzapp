@@ -18,8 +18,8 @@
                     <div class="headerLeft">
                         
                             <div class="imgNome ps-2">
-                                <img class="imgAvatar" :src="contacts[0].avatar" alt="">
-                                <h6 class="pt-2 ps-2">{{contacts[index].name}}</h6>
+                                <img class="imgAvatar" src="./img/avatar_io.jpg" alt="">
+                                <h6 class="pt-2 ps-2">Sofia</h6>
                             </div>
                             <div class="iconHeaderLeft">
                                 <i class="fa-solid fa-circle-notch pe-2"></i>
@@ -38,11 +38,17 @@
                     </div>
 
                     <div class="barraDiRicerca">
-
+                        <div class="input-group bg-white">
+                            <span class="input-group-text" id="basic-addon1">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
                     </div>
+
                     <div class="chatPersone" >
-                        <div v-for="(elem, index) in contacts" :key="index">
-                            <div class="imgNomeChat ps-2 pt-1 pb-2 align-items-center" >
+                        <div v-for="(elem, index) in contacts" :key="index" >
+                            <div class="imgNomeChat pt-2 ps-2 pt-1 pb-2 align-items-center" >
                                 <img class="imgAvatar" :src="contacts[index].avatar" alt="">
                                 <div class= "nomeUltimoOrario ps-2">
                                     <span class="name">{{contacts[index].name}}</span>
@@ -74,10 +80,22 @@
                     </div>
 
                     <div class="mainRight">
-
+                        <div class="" v-for="(elem, index) in messages">
+                            <div>{{contacts[index].messages[index].message}}</div>
+                        </div>
                     </div>
                     <div class="footerRight">
+                        <div>
 
+                        </div>
+                        <div class="input-group d-flex align-items-center py-2">
+                            <i class="fa-solid fa-face-smile mx-2"></i>
+                            <input type="text" class="form-control" placeholder="Scrivi messaggio" aria-label="Username" aria-describedby="basic-addon1">
+                            <i class="fa-solid fa-microphone mx-2"></i>
+                        </div>
+                        <div>
+
+                        </div>
                     </div>
                 </div>
             </div>

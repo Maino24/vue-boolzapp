@@ -72,8 +72,14 @@
     font-size: 1.5rem;
 }
 
+.barraDiRicerca{
+    height: 5%;
+    background-color: white;
+    padding: 2px;
+}
+
 .chatPersone{
-    height: calc(100% - 8% - 8%);
+    height: calc(100% - 8% - 8% - 5%);
     background-color: white;
 }
 
@@ -129,3 +135,5 @@
     height: 8%;
     background-color: rgba(234, 234, 234, 1);
 }
+
+

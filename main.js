@@ -169,6 +169,16 @@ var app = new Vue({
                 ],
             }
         ]        
-    }
+    },
+/*
+    methods: {
 
+        esegui: function(){
+
+            this.contacts.visible = true
+
+        }
+
+    }
+*/
 })
