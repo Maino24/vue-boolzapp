@@ -83,11 +83,19 @@
                         <div v-if="" class="mainRight1" v-for="(messaggio,index) in contacts[index].messages">
                             <div v-if="messaggio.status == `sent`" class="sent">
                                 {{messaggio.message}} 
+                                
                             </div> 
                     
                             <div v-else="" class="received">
                                 {{messaggio.message}} 
                             </div>
+                        </div>
+                        <div>
+                            {{msgNew}}
+                        </div>
+                        <div>
+                            {{msgAuto}}
+
                         </div>
                     </div>
 
@@ -98,7 +106,7 @@
                         </div>
                         <div class="input-group d-flex align-items-center py-2">
                             <i class="fa-solid fa-face-smile mx-3"></i>
-                            <input type="text" class="form-control mx-3" placeholder="Scrivi messaggio" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control mx-3" v-on:keyup.enter="onEnter" placeholder="Scrivi messaggio" aria-label="Username" aria-describedby="basic-addon1">
                             <i class="fa-solid fa-microphone mx-3"></i>
                         </div>
                         <div>

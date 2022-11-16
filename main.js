@@ -5,6 +5,10 @@ var app = new Vue({
 
         index: 0,
 
+        msgNew: ``,
+
+        msgAuto: ``,
+
         contacts: [
             {
                 name: 'Michele',
@@ -170,6 +174,9 @@ var app = new Vue({
             }
         ]        
     },
+    mounted(){
+        this.attiva()
+    },
 
     methods: {
 
@@ -177,6 +184,23 @@ var app = new Vue({
 
             this.index = index;
     
+        },
+
+        onEnter: function(){
+ 
+
+           return this.msgNew
+            
+        },
+
+        answer: function(){
+            return this.msgAuto = `ok`
+        },
+
+        attiva(){
+            
+            setTimeout( ()=>{ this.answer() }, 1000 )
+            
         }
 
     }
