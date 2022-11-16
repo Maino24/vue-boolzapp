@@ -48,7 +48,7 @@
 
                     <div class="chatPersone" >
                         <div v-for="(elem, index) in contacts" :key="index" >
-                            <div class="imgNomeChat pt-2 ps-2 pt-1 pb-2 align-items-center" >
+                            <div class="imgNomeChat pt-2 ps-2 pt-1 pb-2 align-items-center" @click="selezioneContatto" >
                                 <img class="imgAvatar" :src="contacts[index].avatar" alt="">
                                 <div class= "nomeUltimoOrario ps-2">
                                     <span class="name">{{contacts[index].name}}</span>
@@ -81,9 +81,13 @@
 
                     <div class="mainRight">
 
-                        <div class="sent">
-                            ciao
+                        
+                        <div class="sent" v-for="(messaggio,index) in contacts[[index]].messages">
+                            <div class="">
+                                {{messaggio.message}} 
+                            </div> 
                         </div>
+                        
                         <div class="received">
                             ciao
                         </div>

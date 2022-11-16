@@ -170,15 +170,15 @@ var app = new Vue({
             }
         ]        
     },
-/*
+
     methods: {
 
-        esegui: function(){
+        selezioneContatto: function(){
 
             this.contacts.visible = true
-
+            //console.log(`ciao`)
         }
 
     }
-*/
+
 })
