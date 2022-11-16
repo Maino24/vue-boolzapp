@@ -80,21 +80,15 @@
                     </div>
 
                     <div class="mainRight">
-
-                        
-                        <div class="sent" v-for="(messaggio,index) in contacts[[index]].messages">
-                            <div class="">
+                        <div  class="mainRight1" v-for="(messaggio,index) in contacts[index].messages">
+                            <div v-if="messaggio.status == `sent`" class="sent">
                                 {{messaggio.message}} 
                             </div> 
+                    
+                            <div v-else="" class="received">
+                                {{messaggio.message}} 
+                            </div>
                         </div>
-                        
-                        <div class="received">
-                            ciao
-                        </div>
-
-                      <!--  <div class="" v-for="(elem, index) in messages">
-                            <div>{{contacts[index].messages[index].message}}</div>
-                        </div>-->
                     </div>
 
 
