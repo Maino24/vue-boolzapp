@@ -201,7 +201,7 @@ var app = new Vue({
             }),
 
             setTimeout( ()=> {
-                getMessagesOfContact.push(
+                msgNew.push(
                 {
                 date: now,
                 message: `ok`,
@@ -211,8 +211,6 @@ var app = new Vue({
                 }, 1000)
 
         }
-
-        
 
     }
 
