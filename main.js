@@ -5,9 +5,7 @@ var app = new Vue({
 
         index: 0,
 
-        msgNew: ``,
-
-        msgAuto: ``,
+        inputMessage: ``,
 
         contacts: [
             {
@@ -175,7 +173,7 @@ var app = new Vue({
         ]        
     },
     mounted(){
-        this.attiva()
+        
     },
 
     methods: {
@@ -186,22 +184,35 @@ var app = new Vue({
     
         },
 
-        onEnter: function(){
- 
+        invioMessage: function(){
 
-           return this.msgNew
-            
-        },
+            let msgNew = this.contacts[this.index].messages
 
-        answer: function(){
-            return this.msgAuto = `ok`
-        },
+            const d = new Date();
+            let data = d.toLocaleTimeString();
+            let time = d.toLocaleTimeString();
 
-        attiva(){
-            
-            setTimeout( ()=>{ this.answer() }, 1000 )
-            
+            let now = `&{data} &{time}`
+
+            msgNew.push({
+                date: now,
+                message: this.inputMessage,
+                status: `sent`,
+            }),
+
+            setTimeout( ()=> {
+                getMessagesOfContact.push(
+                {
+                date: now,
+                message: `ok`,
+                status: `received`
+              }
+              )
+                }, 1000)
+
         }
+
+        
 
     }
 

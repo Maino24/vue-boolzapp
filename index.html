@@ -81,21 +81,10 @@
 
                     <div class="mainRight">
                         <div v-if="" class="mainRight1" v-for="(messaggio,index) in contacts[index].messages">
-                            <div v-if="messaggio.status == `sent`" class="sent">
+                            <div :class="(messaggio.status === `sent` ) ? `sent` : `received`" class="">
                                 {{messaggio.message}} 
                                 
-                            </div> 
-                    
-                            <div v-else="" class="received">
-                                {{messaggio.message}} 
-                            </div>
-                        </div>
-                        <div>
-                            {{msgNew}}
-                        </div>
-                        <div>
-                            {{msgAuto}}
-
+                            </div>              
                         </div>
                     </div>
 
@@ -106,7 +95,7 @@
                         </div>
                         <div class="input-group d-flex align-items-center py-2">
                             <i class="fa-solid fa-face-smile mx-3"></i>
-                            <input type="text" class="form-control mx-3" v-on:keyup.enter="onEnter" placeholder="Scrivi messaggio" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control mx-3" v-model="inputMessage" @keyup.enter="invioMessage" placeholder="Scrivi messaggio" aria-label="Username" aria-describedby="basic-addon1">
                             <i class="fa-solid fa-microphone mx-3"></i>
                         </div>
                         <div>
@@ -121,7 +110,7 @@
     </div>
     
    
-    
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script type="text/javascript" src="main.js"></script>
