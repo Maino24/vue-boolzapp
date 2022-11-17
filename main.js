@@ -7,6 +7,8 @@ var app = new Vue({
 
         inputMessage: ``,
 
+        listaT: false,
+
         contacts: [
             {
                 name: 'Michele',
@@ -181,7 +183,12 @@ var app = new Vue({
         selezioneContatto: function(elem, index){
 
             this.index = index;
+            return this.listaT[index] = true
     
+        },
+
+        selezioneMessaggio: function(elem, index){
+            this.index = index
         },
 
         lastContact: function(elem){
@@ -207,7 +214,7 @@ var app = new Vue({
             let date = d.toLocaleDateString();
             let time = d.toLocaleTimeString();
 
-            let now = `&{date} &{time}`
+            let now = `${date} ${time}`
 
             msgNew.push({
                 date: now,
@@ -224,6 +231,7 @@ var app = new Vue({
               }
               )
                 }, 1000)
-        }
+        },
+
     }
 })

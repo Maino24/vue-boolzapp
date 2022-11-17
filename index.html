@@ -80,10 +80,19 @@
                     </div>
 
                     <div class="mainRight">
-                        <div v-if="" class="mainRight1" v-for="(messaggio,index) in contacts[index].messages">
+                        <div class="mainRight1" v-for="(messaggio,index) in contacts[index].messages">
                             <div :class="(messaggio.status === `sent` ) ? `sent` : `received`" class=" containerMessaggio d-flex">
                                 <div> {{messaggio.message}} </div>
                                 <div></div>
+                                <div>
+                                    <div class=" dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Elimina messaggio</a></li>
+                                        <li><a class="dropdown-item" href="#">Info messaggio</a></li>                                    </ul>
+                                    </div>
+                                </div>
                                 <div class="timeMessage"> {{lastMessage(messaggio)}} </div>    
                             </div>              
                         </div>
