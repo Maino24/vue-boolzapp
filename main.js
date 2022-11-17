@@ -184,6 +184,13 @@ var app = new Vue({
     
         },
 
+        lastContact: function(elem){
+            let lastDate = elem.messages[elem.messages.length-1].date
+            lastDate = lastDate.split(` `)
+
+            return lastDate[1]
+        },
+
         lastMessage: function(elem){
 
             let date = elem.date
@@ -197,10 +204,10 @@ var app = new Vue({
             let msgNew = this.contacts[this.index].messages
 
             const d = new Date();
-            let data = d.toLocaleTimeString();
+            let date = d.toLocaleDateString();
             let time = d.toLocaleTimeString();
 
-            let now = `&{data} &{time}`
+            let now = `&{date} &{time}`
 
             msgNew.push({
                 date: now,
