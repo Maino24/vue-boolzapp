@@ -160,6 +160,18 @@
     margin-bottom: 10px;
 }
 
+.containerMessaggio{
+    justify-content: space-between;
+}
+
+.timeMessage{
+    font-size: 10px;
+    align-self: flex-end;
+    width: 20%;
+}
+
+
+
 .footerRight{
     width: 100%;
     height: 8%;

@@ -184,6 +184,14 @@ var app = new Vue({
     
         },
 
+        lastMessage: function(elem){
+
+            let date = elem.date
+            date = date.split(` `)
+
+            return date[1]
+        },
+
         invioMessage: function(){
 
             let msgNew = this.contacts[this.index].messages
@@ -209,9 +217,6 @@ var app = new Vue({
               }
               )
                 }, 1000)
-
         }
-
     }
-
 })

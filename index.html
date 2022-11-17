@@ -81,9 +81,10 @@
 
                     <div class="mainRight">
                         <div v-if="" class="mainRight1" v-for="(messaggio,index) in contacts[index].messages">
-                            <div :class="(messaggio.status === `sent` ) ? `sent` : `received`" class="">
-                                {{messaggio.message}} 
-                                
+                            <div :class="(messaggio.status === `sent` ) ? `sent` : `received`" class=" containerMessaggio d-flex">
+                                <div> {{messaggio.message}} </div>
+                                <div></div>
+                                <div class="timeMessage"> {{lastMessage(messaggio)}} </div>    
                             </div>              
                         </div>
                     </div>
