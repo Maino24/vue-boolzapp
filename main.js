@@ -7,13 +7,13 @@ var app = new Vue({
 
         inputMessage: ``,
 
-        listaT: false,
+        inputContact:'',
 
         contacts: [
             {
                 name: 'Michele',
                 avatar: './img/avatar_1.jpg',
-                visible: false,
+                visible: true,
                 messages: [
                 {
                     date: '10/01/2020 15:30:55',
@@ -36,7 +36,7 @@ var app = new Vue({
             {
                 name: 'Fabio',
                 avatar: './img/avatar_2.jpg',
-                visible: false,
+                visible: true,
                 messages: [
                 {
                     date: '20/03/2020 16:30:00',
@@ -58,7 +58,7 @@ var app = new Vue({
             {
                 name: 'Samuele',
                 avatar: './img/avatar_3.jpg',
-                visible: false,
+                visible: true,
                 messages: [
                     {
                     date: '28/03/2020 10:10:40',
@@ -80,7 +80,7 @@ var app = new Vue({
             {
                     name: 'Alessandro B.',
                     avatar: './img/avatar_4.jpg',
-                    visible: false,
+                    visible: true,
                     messages: [
                     {
                     date: '10/01/2020 15:30:55',
@@ -97,7 +97,7 @@ var app = new Vue({
             {
                     name: 'Alessandro L.',
                     avatar: './img/avatar_5.jpg',
-                    visible: false,
+                    visible: true,
                     messages: [
                     {
                     date: '10/01/2020 15:30:55',
@@ -114,7 +114,7 @@ var app = new Vue({
                     {
                     name: 'Claudia',
                     avatar: './img/avatar_6.jpg',
-                    visible: false,
+                    visible: true,
                     messages: [
                     {
                     date: '10/01/2020 15:30:55',
@@ -136,7 +136,7 @@ var app = new Vue({
             {
                     name: 'Federico',
                     avatar: './img/avatar_7.jpg',
-                    visible: false,
+                    visible: true,
                     messages: [
                     {
                     date: '10/01/2020 15:30:55',
@@ -153,7 +153,7 @@ var app = new Vue({
             {
                     name: 'Davide',
                     avatar: './img/avatar_8.jpg',
-                    visible: false,
+                    visible: true,
                     messages: [
                     {
                     date: '10/01/2020 15:30:55',
@@ -183,7 +183,7 @@ var app = new Vue({
         selezioneContatto: function(elem, index){
 
             this.index = index;
-            return this.listaT[index] = true
+            
     
         },
 
@@ -233,5 +233,22 @@ var app = new Vue({
                 }, 1000)
         },
 
+        ricercaName: function () {
+            this.contacts.forEach((elem, index) => {
+                let names = elem.name;
+                if (
+                names.includes(this.inputContact) ||
+                elem.name.toLowerCase().includes(this.inputContact) ||
+                elem.name.toUpperCase().includes(this.inputContact)) {
+                    elem.visible = true;
+                } else {
+                    elem.visible = false;
+                }
+            });
+        }
+
+
+
     }
+
 })
