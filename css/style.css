@@ -141,11 +141,9 @@
 }
 
 .mainRight1{
-    
     display: flex;
     flex-direction: column;
 }
-
 
 .sent{
     background-color: rgba(213, 249, 186, 1);
