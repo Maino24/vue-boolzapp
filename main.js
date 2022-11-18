@@ -9,6 +9,8 @@ var app = new Vue({
 
         inputContact:'',
 
+        arrayElimina: [],
+
         contacts: [
             {
                 name: 'Michele',
@@ -233,6 +235,8 @@ var app = new Vue({
                 }, 1000)
         },
 
+        /* RICERCA NOMI */
+
         ricercaName: function () {
             this.contacts.forEach((elem, index) => {
                 let names = elem.name;
@@ -245,9 +249,11 @@ var app = new Vue({
                     elem.visible = false;
                 }
             });
+        },
+
+        deleteMessage(messaggio, index){
+            this.contacts[this.index].messages.splice(index, 1)
         }
-
-
 
     }
 
