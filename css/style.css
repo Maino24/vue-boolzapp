@@ -66,6 +66,7 @@
 
 .paragrafo{
     font-size: 0.7rem;
+    margin-bottom: 0;
 }
 
 .fa-bell-slash{
@@ -76,6 +77,10 @@
     height: 5%;
     background-color: white;
     padding: 2px;
+}
+
+.fa-magnifying-glass{
+    font-size: 10px;
 }
 
 .chatPersone{
@@ -98,6 +103,7 @@
 .name{
     display: block;
 }
+
 
 
 /* CLASSI COLONNA DESTRA */
@@ -131,6 +137,7 @@
     padding: 40px;  
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
 }
 
 .mainRight1{
